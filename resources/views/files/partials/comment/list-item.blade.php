@@ -12,7 +12,7 @@
                 <span class="comment-info__author-name"><b>{{ $comment->user ? $comment->user->username : "Anonymous" }}</b></span>
                 <span class="comment-info__date">{{ $comment->created_at->format("M j, Y H:i") }}</span>
                 <div class="comment-content mb-2">{{ $comment->content }}</div>
-                <span class="reply-link">Reply</span>
+                <span class="reply-link">Repondre</span>
                 <div class="reply-form">
                     @include("files.partials.reply.form")
                 </div>

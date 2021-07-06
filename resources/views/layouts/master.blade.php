@@ -43,7 +43,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Registration</h5>
+                            <h5 class="modal-title">Inscription</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -51,7 +51,7 @@
                         <form method="post" id="register-form" action="/register">
                             <div class="modal-body">
                                     <div class="form-group">
-                                        <label for="username">Username:</label>
+                                        <label for="username">Pseudo:</label>
                                         <input type="text" class="form-control"
                                                id="username" name="username">
                                         <div class="invalid-feedback username-error"></div>
@@ -65,21 +65,21 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="password">Password:</label>
+                                        <label for="password">Mot de passe:</label>
                                         <input type="password" class="form-control"
                                                id="password" name="password">
                                         <div class="invalid-feedback password-error"></div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="password_confirmation">Confirm your password:</label>
+                                        <label for="password_confirmation">Confirmer mot de passe:</label>
                                         <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
                                     </div>
 
                             </div>
                             <div class="modal-footer">
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary">Register</button>
+                                    <button type="submit" class="btn btn-primary">inscription</button>
                                 </div>
                             </div>
                         </form>
@@ -92,7 +92,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Logging in</h5>
+                            <h5 class="modal-title">Connexion</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -105,7 +105,7 @@
                                     <div class="invalid-feedback email-error"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="loginPassword">Password:</label>
+                                    <label for="loginPassword">Mot de passe:</label>
                                     <input type="password" name="password" class="form-control" id="loginPassword">
                                     <div class="invalid-feedback password-error"></div>
                                 </div>
@@ -115,7 +115,7 @@
                                     <div class="invalid-feedback auth-error"></div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary align-middle">Log in</button>
+                                    <button type="submit" class="btn btn-primary align-middle">Connexion</button>
                                 </div>
                             </div>
                         </form>

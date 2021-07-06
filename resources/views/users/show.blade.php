@@ -12,12 +12,12 @@
                 <div class="profile-right">
                     @if ($files->count())
                         <ul class="list-group">
-                            <li class="list-group-item"><h5 class="text-center">Files uploaded by {{ $user->username }}</h5></li>
+                            <li class="list-group-item"><h5 class="text-center">Cas ajouter par {{ $user->username }}</h5></li>
                             @each("files.partials.file.list-item", $files, "file")
                         </ul>
                     @else
                         <div class="text-center">
-                            User has not uploaded any files yet
+                            Aucun cas lier a cette clinique
                         </div>
                     @endif
                 </div>

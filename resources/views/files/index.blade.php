@@ -3,16 +3,16 @@
 @section("content")
     @if ($files->count())
         <ul class="list-group file-list">
-            <li class="list-group-item"><h5 class="text-center">Recently uploaded files</h5></li>
+            <li class="list-group-item"><h5 class="text-center">Cas cliniques</h5></li>
             <div class="card-box mb-30">
                 <div class="pb-20">
                     <table class="data-table table stripe hover nowrap">
                         <thead>
                             <tr>
-                                <th class="table-plus datatable-nosort">User</th>
+                                <th class="table-plus datatable-nosort">Utilisateur</th>
                                
-                                <th>File Name</th>
-                                <th>Uploaded</th>
+                                <th>Fichier</th>
+                                <th>Mis en ligne</th>
                                 <th class="datatable-nosort">Action</th>
                             </tr>
                         </thead>
@@ -29,9 +29,9 @@
                                            
                                         </a>
                                         
-                                            <a class="dropdown-item" href="/files/{{ $file->id }}" ><i class="dw dw-eye"></i> View</a>
-                                            <a class="dropdown-item" href="/download/{{ $file->id }}/{{ $file->original_name }}"><i class="dw dw-download"></i> Download</a>
-                                            <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+                                            <a class="dropdown-item" href="/files/{{ $file->id }}" ><i class="dw dw-eye"></i> Consulter</a>
+                                            <a class="dropdown-item" href="/download/{{ $file->id }}/{{ $file->original_name }}"><i class="dw dw-download"></i> Prendre en charge</a>
+                                            
                                         
                                     </div>
                                 </td>

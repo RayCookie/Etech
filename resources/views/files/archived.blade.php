@@ -3,15 +3,15 @@
 @section("content")
     @if ($files->count())
         <ul class="list-group file-list">
-            <li class="list-group-item"><h5 class="text-center">Recently uploaded files</h5></li>
+            <li class="list-group-item"><h5 class="text-center">Cas pris en charge</h5></li>
             <div class="card-box mb-30">
                 <div class="pb-20">
                     <table class="data-table table stripe hover nowrap">
                         <thead>
                             <tr>
-                                <th class="table-plus datatable-nosort">User</th>
-                                <th>File Name</th>
-                                <th>Uploaded</th>
+                                <th class="table-plus datatable-nosort">Utilisateur</th>
+                                <th>Fichier</th>
+                                <th>Mis en ligne</th>
                                 <th class="datatable-nosort">Action</th>
                             </tr>
                         </thead>
@@ -27,7 +27,7 @@
                                            
                                         </a>
                                         
-                                            <a class="dropdown-item" href="/archived/{{ $file->id }}"><i class="dw dw-upload"></i> Restore</a>
+                                            <a class="dropdown-item" href="/archived/{{ $file->id }}"><i class="dw dw-upload"></i> Restorer</a>
 
                                         
                                     </div>

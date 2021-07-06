@@ -35,8 +35,9 @@ class FilesController extends Controller
     {
         $this->fileService->handleUploadedFile($request->file("file"));
         $this->fileService->handleUploadedFile($request);
-        $file->note  = $request->input('note');
-        $file->specialite = $request->input('specialite');
+
+        
+        
         return response()->json(["success" => "success"]);
     }
 
@@ -47,7 +48,7 @@ class FilesController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($id)
-    {
+    { 
         $file = File::where("id", $id)->firstOrFail();
         $comments = $file->comments()->where("parent_id", null)->get();
 
@@ -71,7 +72,7 @@ class FilesController extends Controller
         }
 
         $lastFiles = File::where("downloaded",0)->orderBy("id", "desc")->take(100)->paginate(10);
-
+        
         return view("files.index", ["files" => $lastFiles]);
     }
     public function indexArchived(Request $request)

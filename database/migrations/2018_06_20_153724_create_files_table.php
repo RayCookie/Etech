@@ -19,6 +19,8 @@ class CreateFilesTable extends Migration
             $table->string('original_name');
             $table->string('storage_name');
             $table->string("extension");
+            $table->string("specialite");
+            $table->string("note");
             $table->json("meta_data");
             $table->tinyInteger("has_related_icon");
             $table->timestamps();

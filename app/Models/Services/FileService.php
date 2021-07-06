@@ -76,7 +76,11 @@ class FileService
            "extension" => $fileExtension,
            "meta_data" => $fileMetaData,
            "has_related_icon" => $hasRelatedIcon,
-           "user_id" => $this->getUploaderId()
+           "user_id" => $this->getUploaderId(),
+
+           "note" => request()->input('note'),
+           "specialite" =>request()->input('specialite')
+           
         ]);
 
         return $pathToFile;

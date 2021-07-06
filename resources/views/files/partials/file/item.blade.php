@@ -123,7 +123,7 @@
                 </div>
             @endif
             @include("files.partials.file.card")
-            <a class="btn btn-primary" href="/download/{{ $file->id }}/{{ $file->original_name }}" role="button">Download</a>
+            <a class="btn btn-primary" href="/download/{{ $file->id }}/{{ $file->original_name }}" role="button">Prendre en charge</a>
         </div>
     </div>
 </div>
