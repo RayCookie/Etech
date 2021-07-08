@@ -8,6 +8,9 @@
                 <a class="nav-link" href="/">Acceuil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/list">Cas internes</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/files">Cas cliniques</a>
             </li>
             <li class="nav-item">
@@ -17,11 +20,11 @@
         @guest
             <ul class="navbar-nav navbar-right">
                 <li class="nav-item">
-                    <a class="nav-link" href="#loginModal" data-toggle="modal" data-target="#loginModal">Inscription</a>
+                    <a class="nav-link" href="#loginModal" data-toggle="modal" data-target="#loginModal">Connexion</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#registerModal" data-toggle="modal" data-target="#registerModal">Connexion</a>
+                    <a class="nav-link" href="#registerModal" data-toggle="modal" data-target="#registerModal">Inscription</a>
                 </li>
             </ul>
         @endguest

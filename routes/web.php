@@ -34,12 +34,14 @@ Route::post("/upload", "FilesController@store");
 Route::get("/files/{id}", "FilesController@show");
 Route::get("/files/{fileId}/comments", "CommentsController@show");
 Route::get("/files", "FilesController@index");
+
 Route::get("/archived", "FilesController@indexArchived");
 
 Route::get("/download/{id}/{originalName}", "DownloadsController@index");
 
 Route::get("/archived/{id}", "DownloadsController@unarchive");
 
+Route::get("/list", "FilesController@indexList");
 
 Route::post("/comments", "CommentsController@store");
 

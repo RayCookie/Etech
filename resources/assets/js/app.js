@@ -42,7 +42,7 @@ if ($(".dropbox-overlay").length && isAdvancedUpload) {
 
 $("#file-input").fileinput({
     theme: "fas",
-   
+    uploadUrl: "/upload",
     showUploadedThumbs: false,
     showPreview: false,
     showAjaxErrorDetails: true,

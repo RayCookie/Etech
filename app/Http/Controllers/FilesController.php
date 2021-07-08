@@ -6,6 +6,7 @@ use App\Http\Requests\FileUploadRequest;
 use App\Models\Services\FileService;
 use App\Models\Entities\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class FilesController extends Controller
@@ -89,5 +90,24 @@ class FilesController extends Controller
 
         return view("files.archived", ["files" => $lastFiles]);
     }
+
+    public function indexList(Request $request)
+    {   $user=Auth::user()->id;
+
+        if ($request->has("search")) {
+           $searchFiles = File::where("original_name", "like", "%{$request->search}%")
+                                ->where("user_id", $user)->
+                                take(100)->paginate(10);
+
+           return view("files.search", ["files" => $searchFiles, "search" => $request->search]);
+        }
+
+        
+
+        $lastFiles = File::where("user_id", $user)->orderBy("id", "desc")->take(100)->paginate(10);
+
+        return view("files.interne", ["files" => $lastFiles]);
+    }
+
 
 }
