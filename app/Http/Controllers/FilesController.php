@@ -92,8 +92,8 @@ class FilesController extends Controller
     }
 
     public function indexList(Request $request)
-    {   $user=Auth::user()->id;
-
+    {   
+        $user=Auth::id();
         if ($request->has("search")) {
            $searchFiles = File::where("original_name", "like", "%{$request->search}%")
                                 ->where("user_id", $user)->

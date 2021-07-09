@@ -19,21 +19,19 @@
                         <tbody>
                             @foreach ($files as $file)
                             <tr>
-                                <td class="table-plus"> <a href="/users/{{ $file->user_id }}" class="show-profile-link"><b></b></a></td>
+                                <td class="table-plus"> <a href="/users/{{ $file->user_id }}" class="show-profile-link"><b>{{ !empty($file->user) ? $file->user->username:'Annonyme' }}</b></a></td>
                                 
                                 <td> {{ $file->original_name }}</td>
                                 <td>{{ $file->created_at->diffForHumans() }}</td>
                                 <td>
-                                    <div class="dropdown">
-                                        <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                                           
-                                        </a>
+                                    
+                                        
                                         
                                             <a class="dropdown-item" href="/files/{{ $file->id }}" ><i class="dw dw-eye"></i> Consulter</a>
                                             <a class="dropdown-item" href="/download/{{ $file->id }}/{{ $file->original_name }}"><i class="dw dw-download"></i> Prendre en charge</a>
                                             
                                         
-                                    </div>
+                                   
                                 </td>
                             </tr>
                             @endforeach

@@ -18,19 +18,22 @@
                         <tbody>
                             @foreach ($files as $file)
                             <tr>
-                                <td class="table-plus"> <a href="/users/{{ $file->user_id }}" class="show-profile-link"><b></b></a></td>
+                                <td class="table-plus"> <a href="/users/{{ $file->user_id }}" class="show-profile-link"><b>{{ !empty($file->user) ? $file->user->username:'Annonyme' }}</b></a></td>
+                                
+                                
                                 <td> {{ $file->original_name }}</td>
                                 <td>{{ $file->created_at->diffForHumans() }}</td>
                                 <td>
-                                    <div class="dropdown">
-                                        <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                                           
-                                        </a>
-                                        
-                                            <a class="dropdown-item" href="/archived/{{ $file->id }}"><i class="dw dw-upload"></i> Restorer</a>
+                                   
+                                         
+                                           @if ($file->downloaded == 1)
+                                          <span class="badge badge-pill badge-warning">Pending...</span>
+                                           @else
+                                           <span class="badge badge-pill badge-success">Pris en charge</span>
+                                           @endif
 
                                         
-                                    </div>
+                                
                                 </td>
                             </tr>
                             @endforeach
