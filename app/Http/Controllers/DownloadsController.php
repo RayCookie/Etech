@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect; 
 use App\Models\Entities\File;
 
 class DownloadsController extends Controller
@@ -40,6 +40,6 @@ class DownloadsController extends Controller
         $file->save(); 
         
         
-        exit;
+        return Redirect::to('/archived');
     }
 }
