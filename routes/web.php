@@ -31,6 +31,7 @@ Route::post("/avatars", "AvatarsController@store");
 
 Route::post("/upload", "FilesController@store");
 
+
 Route::get("/files/{id}", "FilesController@show");
 Route::get("/files/{fileId}/comments", "CommentsController@show");
 Route::get("/files", "FilesController@index");
