@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success">
-                    upload
+                    Mettre en ligne
                    </button>
                 
             </form>

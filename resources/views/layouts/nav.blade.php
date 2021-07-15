@@ -30,7 +30,9 @@
             <div class="dropdown">
                 <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                     <span class="user-icon">
-                        <img src="vendors/images/photo1.jpg" alt="">
+                        
+                        <img src="/storage/avatars/{{Auth::user()->avatar_name}}" alt="">
+                        
                     </span>
                     <span class="user-name">{{ Auth::user()->username }}</span>
                 </a>

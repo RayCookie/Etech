@@ -19,6 +19,7 @@ Route::get("/{url}", function() {
     return redirect()->route("home");
 })->where(["url" => "register|login|upload|comments"]);
 
+
 Route::get("/logout", "SessionsController@destroy");
 
 Route::post("/register", "RegistrationController@store");

@@ -583,8 +583,7 @@ pre code {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+ 
   margin-right: auto;
   margin-left: auto;
 }
@@ -18082,7 +18081,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 .image-preview {
-  max-height: 350px;
+  max-height: auto;
   overflow: hidden;
   border-radius: 4px;
 }

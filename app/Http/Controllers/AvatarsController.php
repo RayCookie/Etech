@@ -40,7 +40,7 @@ class AvatarsController extends Controller
 
             $previousUserAvatarName = $user->avatar_name;
 
-            // Saving new avatar to the database
+            // Sauvegarde un nouveau avatar
             $user->avatar_name = $this->avatarService->getAvatarName();
             $user->save();
 
